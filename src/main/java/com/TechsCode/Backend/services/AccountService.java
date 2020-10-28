@@ -1,7 +1,7 @@
-package com.TechsCode.BaseBackend.services;
+package com.TechsCode.Backend.services;
 
-import com.TechsCode.BaseBackend.entities.Account;
-import com.TechsCode.BaseBackend.repositories.AccountRepository;
+import com.TechsCode.Backend.entities.Account;
+import com.TechsCode.Backend.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

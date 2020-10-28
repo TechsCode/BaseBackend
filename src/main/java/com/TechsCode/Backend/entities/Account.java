@@ -1,4 +1,4 @@
-package com.TechsCode.BaseBackend.entities;
+package com.TechsCode.Backend.entities;
 
 import javax.persistence.*;
 import java.util.UUID;

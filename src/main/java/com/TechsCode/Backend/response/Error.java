@@ -1,4 +1,4 @@
-package com.TechsCode.BaseBackend.response;
+package com.TechsCode.Backend.response;
 
 public class Error {
 
