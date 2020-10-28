@@ -4,7 +4,7 @@ import java.io.File;
 
 public class FrontendField {
 
-    private File path;
+    private final File path;
 
     public FrontendField(File path) {
         this.path = path;
