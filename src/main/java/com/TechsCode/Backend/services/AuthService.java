@@ -1,17 +1,15 @@
-package com.TechsCode.Backend.auth;
+package com.TechsCode.Backend.services;
 
 import com.TechsCode.Backend.entities.Account;
-import com.TechsCode.Backend.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Component
-public class AuthManager {
+@Service
+public class AuthService {
 
     @Autowired
     private AccountService accountService;
