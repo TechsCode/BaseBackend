@@ -1,5 +1,7 @@
-package com.TechsCode.Backend;
+package com.TechsCode.Backend.config;
 
+import com.TechsCode.Backend.config.fields.FrontendField;
+import com.TechsCode.Backend.config.fields.PortField;
 import com.TechsCode.Backend.repositories.database.DatabaseConfiguration;
 import com.TechsCode.Backend.repositories.database.DatabaseCredentials;
 import com.google.gson.Gson;
@@ -45,5 +47,19 @@ public class BackendConfiguration {
     @Bean
     public DatabaseCredentials getCredentials(){
         return gson.fromJson(content.getAsJsonObject("database"), DatabaseCredentials.class);
+    }
+
+    @Bean
+    public FrontendField getFrontend(){
+        File path = new File(content.get("frontend").getAsString());
+
+        return new FrontendField(path);
+    }
+
+    @Bean
+    public PortField getPort(){
+        int port = content.get("port").getAsInt();
+
+        return new PortField(port);
     }
 }
