@@ -24,7 +24,7 @@ public class BackendConfiguration {
 
     private JsonObject content;
 
-    private BackendConfiguration() {
+    public BackendConfiguration() {
         File file = new File("backend.json");
 
         try {
