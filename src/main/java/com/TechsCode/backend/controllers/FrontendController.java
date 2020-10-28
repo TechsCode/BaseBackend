@@ -1,6 +1,6 @@
 package com.techscode.backend.controllers;
 
-import com.techscode.backend.config.fields.FrontendField;
+import com.techscode.backend.configurations.fields.FrontendField;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.error.AbstractErrorController;
@@ -30,6 +30,9 @@ public class FrontendController extends AbstractErrorController {
     private FrontendField frontendField;
 
     @Autowired
+    private FrontendTransformer transformer;
+
+    @Autowired
     public FrontendController(ErrorAttributes errorAttributes) {
         super(errorAttributes);
     }
@@ -52,6 +55,10 @@ public class FrontendController extends AbstractErrorController {
             try {
                 String html = FileUtils.readFileToString(index, Charset.defaultCharset());
 
+                if(transformer != null){
+                    html = transformer.transform(html);
+                }
+
                 return ResponseEntity.status(HttpStatus.OK).body(html);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -64,6 +71,13 @@ public class FrontendController extends AbstractErrorController {
     @Override
     public String getErrorPath() {
         return ERROR_PATH;
+    }
+
+
+    public interface FrontendTransformer {
+
+        public String transform(String html);
+
     }
 
 }

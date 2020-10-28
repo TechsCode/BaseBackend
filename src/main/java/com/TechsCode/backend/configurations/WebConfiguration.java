@@ -1,6 +1,6 @@
 package com.techscode.backend.configurations;
 
-import com.techscode.backend.config.fields.FrontendField;
+import com.techscode.backend.configurations.fields.FrontendField;
 import com.techscode.backend.services.SessionService;
 import com.techscode.backend.resolvers.AccountArgumentResolver;
 import org.springframework.beans.factory.annotation.Autowired;

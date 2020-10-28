@@ -1,4 +1,4 @@
-package com.techscode.backend.config.fields;
+package com.techscode.backend.configurations.fields;
 
 public class PortField {
 

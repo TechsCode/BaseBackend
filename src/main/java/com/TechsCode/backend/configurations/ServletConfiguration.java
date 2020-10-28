@@ -1,10 +1,9 @@
 package com.techscode.backend.configurations;
 
-import com.techscode.backend.config.fields.PortField;
+import com.techscode.backend.configurations.fields.PortField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
