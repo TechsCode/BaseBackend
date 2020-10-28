@@ -9,4 +9,8 @@ public class FrontendField {
     public FrontendField(File path) {
         this.path = path;
     }
+
+    public File getPath() {
+        return path;
+    }
 }
