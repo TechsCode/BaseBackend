@@ -1,4 +1,4 @@
-package com.techscode.backend;
+package com.techscode.backend.configurations;
 
 import com.techscode.backend.config.fields.FrontendField;
 import com.techscode.backend.services.SessionService;
@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.List;
 
 @Configuration
-public class GlobalWebConfig implements WebMvcConfigurer {
+public class WebConfiguration implements WebMvcConfigurer {
 
     private static File staticFolder = new File("static");
 

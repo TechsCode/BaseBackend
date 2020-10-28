@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group 'me.TechsCode'
+group 'me.techscode'
 
 sourceCompatibility = 1.8
 
