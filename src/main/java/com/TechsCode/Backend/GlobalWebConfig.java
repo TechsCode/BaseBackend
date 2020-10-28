@@ -1,6 +1,6 @@
 package com.TechsCode.Backend;
 
-import com.TechsCode.Backend.services.AuthService;
+import com.TechsCode.Backend.services.SessionService;
 import com.TechsCode.Backend.resolvers.AccountArgumentResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -13,11 +13,11 @@ import java.util.List;
 public class GlobalWebConfig implements WebMvcConfigurer {
 
     @Autowired
-    private AuthService authService;
+    private SessionService sessionService;
 
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-        argumentResolvers.add(new AccountArgumentResolver(authService));
+        argumentResolvers.add(new AccountArgumentResolver(sessionService));
     }
 
 }

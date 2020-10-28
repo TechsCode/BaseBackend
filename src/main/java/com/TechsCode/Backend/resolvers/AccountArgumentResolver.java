@@ -1,6 +1,6 @@
 package com.TechsCode.Backend.resolvers;
 
-import com.TechsCode.Backend.services.AuthService;
+import com.TechsCode.Backend.services.SessionService;
 import com.TechsCode.Backend.entities.Account;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 
 public class AccountArgumentResolver implements HandlerMethodArgumentResolver {
 
-    private final AuthService authService;
+    private final SessionService sessionService;
 
-    public AccountArgumentResolver(AuthService authService) {
-        this.authService = authService;
+    public AccountArgumentResolver(SessionService sessionService) {
+        this.sessionService = sessionService;
     }
 
     @Override
@@ -27,6 +27,6 @@ public class AccountArgumentResolver implements HandlerMethodArgumentResolver {
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) {
         HttpServletRequest request = (HttpServletRequest) webRequest.getNativeRequest();
 
-        return authService.getLoggedAccount(request);
+        return sessionService.getLoggedAccount(request);
     }
 }

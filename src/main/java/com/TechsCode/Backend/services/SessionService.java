@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Service
-public class AuthService {
+public class SessionService {
 
     @Autowired
     private AccountService accountService;
