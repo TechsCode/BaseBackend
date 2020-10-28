@@ -1,4 +1,4 @@
-package com.TechsCode.Backend.exceptions;
+package com.techscode.backend.exceptions;
 
 public class UsernameTakenException extends Exception {
 

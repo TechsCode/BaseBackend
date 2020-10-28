@@ -1,6 +1,6 @@
-package com.TechsCode.Backend.controllers;
+package com.techscode.backend.controllers;
 
-import com.TechsCode.Backend.config.fields.FrontendField;
+import com.techscode.backend.config.fields.FrontendField;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.error.AbstractErrorController;

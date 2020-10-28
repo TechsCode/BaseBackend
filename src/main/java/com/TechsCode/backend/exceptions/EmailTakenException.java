@@ -1,4 +1,4 @@
-package com.TechsCode.Backend.exceptions;
+package com.techscode.backend.exceptions;
 
 public class EmailTakenException extends Exception {
 

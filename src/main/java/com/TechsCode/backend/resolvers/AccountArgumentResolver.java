@@ -1,7 +1,7 @@
-package com.TechsCode.Backend.resolvers;
+package com.techscode.backend.resolvers;
 
-import com.TechsCode.Backend.services.SessionService;
-import com.TechsCode.Backend.entities.Account;
+import com.techscode.backend.services.SessionService;
+import com.techscode.backend.entities.Account;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;

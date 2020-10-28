@@ -1,6 +1,6 @@
-package com.TechsCode.Backend.repositories;
+package com.techscode.backend.repositories;
 
-import com.TechsCode.Backend.entities.Account;
+import com.techscode.backend.entities.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, Integer> {

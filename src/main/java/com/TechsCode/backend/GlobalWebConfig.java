@@ -1,8 +1,8 @@
-package com.TechsCode.Backend;
+package com.techscode.backend;
 
-import com.TechsCode.Backend.config.fields.FrontendField;
-import com.TechsCode.Backend.services.SessionService;
-import com.TechsCode.Backend.resolvers.AccountArgumentResolver;
+import com.techscode.backend.config.fields.FrontendField;
+import com.techscode.backend.services.SessionService;
+import com.techscode.backend.resolvers.AccountArgumentResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;

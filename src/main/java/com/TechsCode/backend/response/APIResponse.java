@@ -1,4 +1,4 @@
-package com.TechsCode.Backend.response;
+package com.techscode.backend.response;
 
 import java.util.ArrayList;
 import java.util.Arrays;

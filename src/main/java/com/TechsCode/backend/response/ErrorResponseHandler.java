@@ -1,4 +1,4 @@
-package com.TechsCode.Backend.response;
+package com.techscode.backend.response;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

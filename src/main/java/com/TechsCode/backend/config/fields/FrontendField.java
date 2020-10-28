@@ -1,4 +1,4 @@
-package com.TechsCode.Backend.config.fields;
+package com.techscode.backend.config.fields;
 
 import java.io.File;
 

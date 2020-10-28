@@ -1,7 +1,5 @@
-package com.TechsCode.Backend.repositories.database;
+package com.techscode.backend.repositories.database;
 
-import com.google.gson.Gson;
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,7 +28,7 @@ public class DatabaseConfiguration {
         LocalContainerEntityManagerFactoryBean lef = new LocalContainerEntityManagerFactoryBean();
         lef.setDataSource(dataSource);
         lef.setJpaVendorAdapter(jpaVendorAdapter);
-        lef.setPackagesToScan("com.TechsCode");
+        lef.setPackagesToScan("com.techscode");
         return lef;
     }
 

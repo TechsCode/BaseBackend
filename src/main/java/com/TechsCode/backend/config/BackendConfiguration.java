@@ -1,9 +1,9 @@
-package com.TechsCode.Backend.config;
+package com.techscode.backend.config;
 
-import com.TechsCode.Backend.config.fields.FrontendField;
-import com.TechsCode.Backend.config.fields.PortField;
-import com.TechsCode.Backend.repositories.database.DatabaseConfiguration;
-import com.TechsCode.Backend.repositories.database.DatabaseCredentials;
+import com.techscode.backend.config.fields.FrontendField;
+import com.techscode.backend.config.fields.PortField;
+import com.techscode.backend.repositories.database.DatabaseConfiguration;
+import com.techscode.backend.repositories.database.DatabaseCredentials;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

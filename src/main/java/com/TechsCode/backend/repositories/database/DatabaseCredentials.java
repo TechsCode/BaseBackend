@@ -1,4 +1,4 @@
-package com.TechsCode.Backend.repositories.database;
+package com.techscode.backend.repositories.database;
 
 import org.springframework.boot.jdbc.DataSourceBuilder;
 
