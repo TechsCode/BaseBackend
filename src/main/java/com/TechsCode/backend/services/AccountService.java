@@ -1,9 +1,9 @@
 package com.techscode.backend.services;
 
-import com.techscode.backend.entities.Account;
+import com.techscode.backend.storage.entities.Account;
 import com.techscode.backend.exceptions.EmailTakenException;
 import com.techscode.backend.exceptions.UsernameTakenException;
-import com.techscode.backend.repositories.AccountRepository;
+import com.techscode.backend.storage.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
