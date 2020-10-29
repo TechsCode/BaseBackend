@@ -1,4 +1,4 @@
-package com.techscode.backend.storage.entities;
+package com.techscode.backend.storage.global.entities;
 
 import javax.persistence.*;
 import java.util.UUID;
