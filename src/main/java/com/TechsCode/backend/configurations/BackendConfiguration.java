@@ -31,7 +31,7 @@ public class BackendConfiguration {
         try {
             if(!file.exists()){
                 if(file.createNewFile()){
-                    InputStream src = DatabaseConfiguration.class.getResourceAsStream("/backend.json");
+                    InputStream src = BackendConfiguration.class.getResourceAsStream("/backend.json");
                     Files.copy(src, Paths.get(file.toURI()), StandardCopyOption.REPLACE_EXISTING);
                 }
             }
