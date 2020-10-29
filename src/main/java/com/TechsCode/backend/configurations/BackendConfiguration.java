@@ -1,9 +1,8 @@
 package com.techscode.backend.configurations;
 
-import com.techscode.backend.configurations.fields.FrontendField;
-import com.techscode.backend.configurations.fields.PortField;
-import com.techscode.backend.repositories.database.DatabaseConfiguration;
-import com.techscode.backend.repositories.database.DatabaseCredentials;
+import com.techscode.backend.configurations.beans.FrontendField;
+import com.techscode.backend.configurations.beans.PortField;
+import com.techscode.backend.configurations.beans.DatabaseCredentials;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

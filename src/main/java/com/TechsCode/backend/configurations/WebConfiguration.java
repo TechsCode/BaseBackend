@@ -1,6 +1,6 @@
 package com.techscode.backend.configurations;
 
-import com.techscode.backend.configurations.fields.FrontendField;
+import com.techscode.backend.configurations.beans.FrontendField;
 import com.techscode.backend.services.SessionService;
 import com.techscode.backend.resolvers.AccountArgumentResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import java.util.List;
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
-    private static File staticFolder = new File("static");
+    private static final File staticFolder = new File("static");
 
     @Autowired
     private FrontendField frontendField;
