@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.List;
 
 /**
  *  This controller will match every request that is not an api call with the index.html
@@ -31,7 +32,7 @@ public class FrontendController extends AbstractErrorController {
     private FrontendField frontendField;
 
     @Autowired
-    private FrontendTransformer transformer;
+    private List<FrontendTransformer> transformers;
 
     @Autowired
     public FrontendController(ErrorAttributes errorAttributes) {
@@ -56,7 +57,7 @@ public class FrontendController extends AbstractErrorController {
             try {
                 String html = FileUtils.readFileToString(index, Charset.defaultCharset());
 
-                if(transformer != null){
+                for(FrontendTransformer transformer : transformers){
                     html = transformer.transform(request, html);
                 }
 
@@ -79,11 +80,6 @@ public class FrontendController extends AbstractErrorController {
 
         String transform(HttpServletRequest request, String html);
 
-    }
-
-    @Bean
-    public FrontendTransformer getEmptyTransformer(){
-        return (request, html) -> html;
     }
 
 }
