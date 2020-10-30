@@ -21,6 +21,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+/*
+
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "globalEntityManagerFactory", basePackages = {"com.techscode.backend.storage.global.repositories" })
@@ -51,9 +53,9 @@ public class GlobalDatabaseConfiguration {
         return new JpaTransactionManager(db1EntityManagerFactory);
     }
 
-}
+}*/
 
-/*
+
 @Configuration
 public class DatabaseConfiguration {
 
@@ -71,7 +73,7 @@ public class DatabaseConfiguration {
         LocalContainerEntityManagerFactoryBean lef = new LocalContainerEntityManagerFactoryBean();
         lef.setDataSource(dataSource);
         lef.setJpaVendorAdapter(jpaVendorAdapter);
-        lef.setPackagesToScan("com.techscode.backend.storage");
+        lef.setPackagesToScan("com.techscode.backend");
         return lef;
     }
 
@@ -84,4 +86,4 @@ public class DatabaseConfiguration {
         return hibernateJpaVendorAdapter;
     }
 
-}*/
+}
