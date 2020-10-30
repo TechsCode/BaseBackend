@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.web.servlet.error.AbstractErrorCon
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -61,7 +62,7 @@ public class FrontendController extends AbstractErrorController {
                     html = transformer.transform(request, html);
                 }
 
-                return ResponseEntity.status(HttpStatus.OK).body(html);
+                return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.TEXT_HTML).body(html);
             } catch (IOException e) {
                 e.printStackTrace();
             }
