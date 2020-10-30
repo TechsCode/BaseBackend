@@ -5,6 +5,7 @@ import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.error.AbstractErrorController;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -56,7 +57,7 @@ public class FrontendController extends AbstractErrorController {
                 String html = FileUtils.readFileToString(index, Charset.defaultCharset());
 
                 if(transformer != null){
-                    html = transformer.transform(html);
+                    html = transformer.transform(request, html);
                 }
 
                 return ResponseEntity.status(HttpStatus.OK).body(html);
@@ -76,8 +77,13 @@ public class FrontendController extends AbstractErrorController {
 
     public interface FrontendTransformer {
 
-        public String transform(String html);
+        String transform(HttpServletRequest request, String html);
 
+    }
+
+    @Bean
+    public FrontendTransformer getEmptyTransformer(){
+        return (request, html) -> html;
     }
 
 }
