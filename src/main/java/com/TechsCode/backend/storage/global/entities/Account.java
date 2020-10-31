@@ -40,10 +40,6 @@ public class Account {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -68,6 +64,14 @@ public class Account {
         this.password = password;
     }
 
+    public String getSessionToken() {
+        return sessionToken;
+    }
+
+    public void setSessionToken(String sessionToken) {
+        this.sessionToken = sessionToken;
+    }
+
     public boolean isVerified() {
         return verified;
     }
@@ -76,8 +80,20 @@ public class Account {
         this.verified = verified;
     }
 
-    public String getSessionToken() {
-        return sessionToken;
+    public DiscordConnection getDiscordConnection() {
+        return discordConnection;
+    }
+
+    public void setDiscordConnection(DiscordConnection discordConnection) {
+        this.discordConnection = discordConnection;
+    }
+
+    public SpigotConnection getSpigotConnection() {
+        return spigotConnection;
+    }
+
+    public void setSpigotConnection(SpigotConnection spigotConnection) {
+        this.spigotConnection = spigotConnection;
     }
 
     public void regenerateSessionToken(){
