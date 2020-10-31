@@ -13,5 +13,10 @@ public class DiscordConnection {
     private String discordName;
     private String discordId;
 
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    @MapsId
+    private Account account;
+
     public DiscordConnection() {}
 }

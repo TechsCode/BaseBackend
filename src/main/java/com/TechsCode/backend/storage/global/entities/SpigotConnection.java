@@ -13,8 +13,8 @@ public class SpigotConnection {
     private String spigotName;
 
     @OneToOne
+    @PrimaryKeyJoinColumn
     @MapsId
-    @JoinColumn(name = "account_id")
     private Account account;
 
     public SpigotConnection() {}
