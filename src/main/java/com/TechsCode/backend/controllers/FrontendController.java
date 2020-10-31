@@ -32,8 +32,8 @@ public class FrontendController extends AbstractErrorController {
     @Autowired
     private FrontendField frontendField;
 
-    @Autowired
-    private List<FrontendTransformer> transformers;
+    @Autowired(required = false)
+    private FrontendTransformer transformer;
 
     @Autowired
     public FrontendController(ErrorAttributes errorAttributes) {
@@ -58,7 +58,7 @@ public class FrontendController extends AbstractErrorController {
             try {
                 String html = FileUtils.readFileToString(index, Charset.defaultCharset());
 
-                for(FrontendTransformer transformer : transformers){
+                if(transformer != null){
                     html = transformer.transform(request, html);
                 }
 
