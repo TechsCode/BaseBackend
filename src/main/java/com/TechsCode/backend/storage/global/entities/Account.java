@@ -8,8 +8,8 @@ import java.util.UUID;
 public class Account {
 
     @Id
-    @Column(unique = true, nullable = false)
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
     private String email;
@@ -21,6 +21,14 @@ public class Account {
     private String sessionToken;
 
     private boolean verified;
+
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    private DiscordConnection discordConnection;
+
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    private SpigotConnection spigotConnection;
 
     public Account() {
         this.verified = false;
